@@ -1,24 +1,226 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Portfolio website of Mubbale Joshua, a web development student learning HTML, CSS and programming.">
-    <meta name="description" content="Personal portfolio website of Mubs">
     <meta name="keywords" content="Mubbale Joshua, portfolio, HTML, CSS, programmer">
     <meta name="author" content="Mubbale Joshua">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mubbale Joshua</title>
-      <link rel="icon" type="image/png" href="IMG_20260213_234848_213.png">
-<title>Mubs Portfolio</title>
+    <link rel="icon" type="image/png" href="IMG_20260213_234848_213.png">
+<style>
+  body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(mmu.JPG);
+  color: grey;
+}
+  header {
+  background-color: green;
+  padding: 30px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: brown;
+  font-family: 'Playfair Display', serif;
+}
+
+header p {
+  margin: 5px 0 0;
+  font-size: 1.2em;
+  color: blue;
+  font-family: 'Playfair Display', serif;
+}
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 75%;
+  object-fit: cover;
+  margin-right: 30px;
+}
+
+.profile-info h2 {
+  margin-top: 0;
+  font-size: 2em;
+  color: green;
+}
+
+.profile-info p {
+  margin: 8px 0;
+  }
+  
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1 1 45%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  min-width: 250px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: green;
+}
+
+.card p {
+  margin: 10px 0 0;
+}
+
+        /* Footer */
+footer {
+  background-color: darkgrey;
+  text-align: center;
+  line-break: 1px;
+  padding: 15px 0;
+  margin-top: 5px;
+}
+footer h3{
+  color: green;
+  margin: 0;
+}
+
+footer p{
+  color: lightblue;
+  margin: 0;
+  text-align: left;
+  
+}
+
+footer a {
+  color: blue;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  }
+
+        /* Responsive */
+@media(max-width: 768px){
+.profile {
+  flex-direction: column;
+  text-align: center;
+  }
+.profile img {
+  margin: 0 0 20px 0;
+}
+.cards {
+  flex-direction: column;
+}
+}
+
+.back-to-top{
+  position: fixed;
+  bottom: 45px;
+  right: 20px;
+  background-color: lightgreen;
+  color: grey;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.back-to-top a{
+  text-decoration: none;
+}
+.back-to-top:hover {
+  background-color: green;
+  text-decoration-color: red;
+}
+
+</style>
 </head>
+<body>
+<a href="My_Webpage.html">About Me</a>
+<a id="top"></a>
+  
+<header>
+  <marquee><h1><b>MUBBALE JOSHUA</b></h1></marquee>
+  <p>Computer Science Student | Mountains of the Moon University</p>
+<hr>
+<a href="#about">About Us</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact Us</a>
+<a href="#hobbies">Hobbies</a>
+</header>
 
-<body style="background-image: url(IMG_20260213_234848_213.png);">
+<!-- Main Content -->
+<main>
+<!-- Profile Section -->
+<div class="profile">
+  <img src="IMG_20260213_234848_213.png" alt="Profile Picture">
+  <div class="profile-info">
+    <h2 id="about">Hello, I'm Mubbale Joshua!</h2>
+    <p>Passionate about programming, web development, and technology. I enjoy creating projects, learning new skills, and improving my abilities every day.</p>
+  </div>
+</div>
 
-<h1>Welcome to My Website</h1>
-<p>This is my</p>
-
-  <a href="My_Webpage.html">About Me</a>
-</body>
+<!-- Info Cards -->
+<div class="cards">
+  <div class="card">
+    <h3 id="education">Course and University</h3>
+    <p>Bachelor of Science in Computer Science</p>
+    <p>Mountains of the Moon University</p>
+  </div>
+  <div class="card">
+    <h3 id="skills">Skills(<span><b>IT Related</b></span>)</h3>
+    <ol type="i">
+      <li>HTML <i>(Hyper Text Markup Language)</i></li>
+      <li>CSS <i>(Cascade Styling Sheet)</i></li>
+      <li>JavaScript</li>
+      <li>C</li>
+      <li>C++</li>
+      <li>Python</li>
+    </ol>
+  </div>
+  <div class="card">
+      <h3 id="hobbies">Hobbies</h3>
+      <ol type="a">
+        <li>Web Development</li>
+        <li>programming</li>
+        <li>Making Research</li>
+        <li>Reading Tech Blogs</li>
+      </ol>
+  </div>
+</div>
+</main>
+<button class="back-to-top"><a href="#top">⬆ Back to Top</a></button>
+    <!-- Footer -->
+<footer>
+  <marquee><p>Copyright© 2026 Mubbale Joshua | Built using HTML & CSS</p></marquee>
+  
+    <h3 id="contact">Contact Us</h3>
+    <p>Email: <a href="mailto: mubsarphaxad@gmail.com">mubsarphaxad@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/mubbale-joshua-75806b38b">linkedin.com/in/Mubbale Joshua</a></p>
+    <p>Twitter: <a href="https://x.com/Mubsarphaxad">https://x.com/Mubsarphaxad</p></h6>
+</footer>
 
 </html>
